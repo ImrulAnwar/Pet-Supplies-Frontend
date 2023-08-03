@@ -1,0 +1,54 @@
+@import "./src/colors.css";
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.search-input {
+  width: 0;
+  padding: 5px 10px;
+  border: 1px solid var(--shade-5);
+  color: var(--shade-17);
+  border-radius: 10px;
+  margin-right: 5px;
+  outline: none;
+  transition: width 0.3s ease-in-out, visibility 0s linear 0.3s; /* Transition for width and visibility */
+  &::placeholder {
+    color: var(--shade-8);
+  }
+}
+
+.search-button {
+  background-color: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  width: auto;
+  transition: scale 0.3s ease-in-out; /* Transition for opacity */
+  transition: transform 0.3s ease;
+}
+
+.search-button:hover {
+  transform: scale(1.1);
+}
+
+.search-button img {
+  width: 20px;
+  margin: 10px;
+}
+
+.search-input:not(.expanded) {
+  visibility: hidden;
+  width: 0;
+}
+
+.search-input.expanded {
+  visibility: visible;
+  width: 22vw;
+  transition-delay: 0s; /* Remove delay for visibility */
+}
