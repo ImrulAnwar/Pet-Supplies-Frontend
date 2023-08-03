@@ -1,0 +1,27 @@
+:root {
+  --shade-0: #ffffff;
+  --shade-1: #faf5f0;
+  --shade-2: #f5ede7;
+  --shade-3: #f0e5de;
+  --shade-4: #eae0d7;
+  --shade-5: #e5d8cf;
+  --shade-6: #e0d0c6;
+  --shade-7: #dac9be;
+  --shade-8: #d5c1b6;
+  --shade-9: #cfc9ae;
+
+  /* Primary Color (unchanged) */
+  --shade-10: #6a4129;
+
+  /* Darker Shades (from black to primary color) */
+  --shade-11: #000000;
+  --shade-12: #140b07;
+  --shade-13: #28170e;
+  --shade-14: #3b2415;
+  --shade-15: #4f301c;
+  --shade-16: #623d23;
+  --shade-17: #764929;
+  --shade-18: #8a552f;
+  --shade-19: #9d6136;
+  --shade-20: #b06d3d;
+}
