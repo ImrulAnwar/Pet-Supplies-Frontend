@@ -1,8 +1,14 @@
-import React from 'react';
+import React from 'react'
+import Line from '../../layouts/Line/Line'
 
 function Profile() {
   return (
-    <h1>This is Profile</h1>
+    <>
+      <Line/>
+      <h1>This is Profile</h1>
+    </>
+    
+    
   );
 }
 

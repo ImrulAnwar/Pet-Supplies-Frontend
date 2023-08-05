@@ -1,8 +1,12 @@
-import React from 'react';
+import React from 'react'
+import Line from '../../layouts/Line/Line'
 
 function Cart() {
   return (
-    <h1>This is Cart</h1>
+    <>
+      <Line/>
+      <h1>This is SHOP</h1>
+    </>
   );
 }
 

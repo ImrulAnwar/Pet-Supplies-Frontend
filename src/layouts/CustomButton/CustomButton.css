@@ -1,12 +1,12 @@
-@import "../colors.css";
+@import "../../colors.css";
 
 .button {
   display: inline-block; /* Make the button shrink-wrap its content */
   background-color: var(--shade-16);
   color: var(--shade-1);
-  padding: 20px 60px;
-  font-size: 20px;
-  border-radius: 30px;
+  padding: 0.5em 2.5em; /* Use relative units for padding */
+  font-size: 1.5rem;
+  border-radius: 1.5em; /* Use relative units for border-radius */
   transition: background-color 0.3s; /* Add a transition for smooth color change */
 }
 

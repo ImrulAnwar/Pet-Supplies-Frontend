@@ -2,21 +2,103 @@
 
 .welcome-section {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   /* Add any other styles you want for the container */
 }
 
 .left-welcome {
   flex: 3;
-  background-color: red;
-  height: 80vh;
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-left: 10vh;
+  animation: fade-in-out 0.5s;
+
   /* Styles for the left section */
 }
 
 .right-welcome {
   flex: 2;
-  background-color: green;
-  height: 80vh;
+  max-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   /* Styles for the right section */
+}
+.welcome {
+  font-size: 3.75rem;
+  font-weight: bold;
+  line-height: 1; /* Increase the line spacing */
+}
+
+.welcome_picture {
+  background-color: transparent;
+  padding: 40px;
+}
+
+.topic_sentence {
+  font-size: 1.5rem;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflowed text */
+  border-right: 2px solid transparent; /* Add a blinking cursor effect */
+  animation: typing 1.5s steps(40), blink-caret 0.75s step-end 3s;
+  animation-delay: 0.5s;
+  margin: 2rem 0rem;
+}
+
+.welcome_picture img {
+  min-height: 320px;
+  max-height: 320px;
+  background-color: transparent;
+  scale: 0.8;
+  animation: bounce-scale-opacity 0.8s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+@keyframes bounce-scale-opacity {
+  0% {
+    transform: translateY(0) scale(0.8); /* Starting position and scaling */
+    opacity: 0; /* Starting opacity */
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2); /* Bounce up and scale up */
+    opacity: 0.5; /* Full opacity */
+  }
+  100% {
+    transform: translateY(0) scale(1); /* Ending position and scaling */
+    opacity: 1; /* Ending opacity */
+  }
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0; /* Starting opacity: fully transparent */
+  }
+  50% {
+    opacity: 0.5; /* Opacity at 50% of the animation: semi-transparent */
+  }
+  100% {
+    opacity: 1; /* Ending opacity: fully opaque */
+  }
 }
