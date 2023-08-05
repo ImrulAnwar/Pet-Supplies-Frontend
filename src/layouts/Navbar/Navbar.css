@@ -1,113 +1,50 @@
-@import "./src/colors.css";
+@import "../../colors.css";
 
 .navbar {
+  background-color: #f0f0f0;
+  padding: 10px;
+  animation: fade-in-out 0.5s;
+}
+
+.container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  margin-top: 20px;
-  max-height: 60px;
-  margin-top: 10p;
-  animation: fade-in-out 0.5s; /* Adjust the maximum width as needed */
-  /* width: 100%; */
-
-  /* background-color: --text-color; */
 }
 
-.home {
-  margin: 0;
-  padding: 0;
-  justify-content: center;
+.left-section {
+  flex: 1;
+}
+
+.middle-section {
+  flex: 1;
+  text-align: center;
+}
+
+.right-section {
+  flex: 1;
   display: flex;
-}
-
-.shop {
-  margin: 0;
-  padding: 0;
-  justify-content: center;
-  display: flex;
-}
-
-.logo img {
-  width: 60px;
-  margin: 10px;
-}
-
-.icon {
-  width: 24px;
-  cursor: pointer;
-  margin-right: 15px;
-  background-color: transparent;
-}
-
-.cart-icon,
-.profile-icon {
-  width: auto;
-}
-
-.icon img {
-  background-color: transparent;
-}
-
-/* Logo section */
-.logo {
-  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
-/* Middle section */
-.middle-sections {
-  display: flex;
-  align-items: center;
-  flex: 1; /* Allow the middle section to take the available space in the center */
-  justify-content: center;
-}
-
-.middle-sections div {
-  display: flex; /* Use flexbox to align image and text vertically */
-  align-items: center;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 14px;
-  margin: 10px;
-}
-
-/* Icons section */
 .icons {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
 }
 
-/* Add styles for the active section */
-.active-section {
-  font-weight: 600;
-  transform: scale(1.1);
-  transition: scale 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  background-color: var(--shade-6);
+.icon {
+  scale: 0.6;
 }
 
-.cart-icon,
-.profile-icon {
-  cursor: pointer;
-  transition: transform 0.3s ease; /* Add transition for the scaling effect */
-  margin-left: 10px;
+.middle-section ul,
+.right-section ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* Hover effect for the cart icon and profile icon */
-.cart-icon:hover,
-.profile-icon:hover {
-  transform: scale(1.1);
-}
-
-@keyframes fade-in-out {
-  0% {
-    opacity: 0; /* Starting opacity: fully transparent */
-  }
-  50% {
-    opacity: 0.5; /* Opacity at 50% of the animation: semi-transparent */
-  }
-  100% {
-    opacity: 1; /* Ending opacity: fully opaque */
-  }
+.middle-section li,
+.right-section li {
+  display: inline-block;
+  margin: 0 10px;
 }
