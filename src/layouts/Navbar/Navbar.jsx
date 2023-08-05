@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './Navbar.css'
 import logo from '../../assets/icons/logo.png';
 import homeIcon from '../../assets/icons/home.png';
@@ -9,6 +9,7 @@ import profileIcon from '../../assets/icons/profile.png';
 import Searchbar from '../Searchbar/Searchbar.jsx'; 
 
 const Navbar = () => {
+  const location = useLocation();
   return (
     <nav className='navbar'>
       <div className="container">
@@ -19,15 +20,25 @@ const Navbar = () => {
         </div>
         <div className="middle-section">
           <ul>
-            <li><Link to="/"><img className="home icon" src={homeIcon} alt="home" />Home</Link></li>
-            <li><Link to="/shop"><img className="shop icon" src={shopIcon} alt="profile" />Shop</Link></li>
+            <li>
+            <Link className={`home link ${location.pathname === '/' ? 'active' : ''}`} to="/">
+              <img className="home icon" src={homeIcon} alt="home" />
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link className={`shop link ${location.pathname === '/shop' ? 'active' : ''}`} to="/shop">
+              <img className="shop icon" src={shopIcon} alt="profile" />
+              Shop
+            </Link>
+          </li>
           </ul>
         </div>
         <div className="right-section">
           <ul className='icons'>
             <li><Searchbar /></li>
-            <li><Link className='cart-icon' to="/register"><img className="cart icon" src={cartIcon} alt="cart" /></Link></li>
-            <li><Link className='profile-icon' to="/register"><img className="profile icon" src={profileIcon} alt="profile" /></Link></li>
+            <li><Link className='cart-icon link' to="/register"><img className="cart icon" src={cartIcon} alt="cart" /></Link></li>
+            <li><Link className='profile-icon link' to="/register"><img className="profile icon" src={profileIcon} alt="profile" /></Link></li>
           </ul>
         </div>
       </div>

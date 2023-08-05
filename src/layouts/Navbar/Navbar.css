@@ -1,8 +1,6 @@
 @import "../../colors.css";
 
 .navbar {
-  background-color: #f0f0f0;
-  padding: 10px;
   animation: fade-in-out 0.5s;
 }
 
@@ -17,7 +15,7 @@
 }
 
 .middle-section {
-  flex: 1;
+  flex: 2;
   text-align: center;
 }
 
@@ -35,16 +33,47 @@
 
 .icon {
   scale: 0.6;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  color: var(--shade-10);
+  text-decoration: none;
+  font-size: x-large;
+}
+
+.link.active {
+  font-weight: bolder;
 }
 
 .middle-section ul,
-.right-section ul {
+.right-section ul,
+.left-section ul {
   list-style: none;
   padding: 0;
 }
 
 .middle-section li,
-.right-section li {
+.right-section li,
+.left-section li {
   display: inline-block;
-  margin: 0 10px;
+  margin: 10px;
+}
+
+@keyframes fade-in-out {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
