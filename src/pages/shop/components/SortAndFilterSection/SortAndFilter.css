@@ -1,5 +1,13 @@
+@import "../../../../colors.css";
+
 .left-shop {
   flex: 1;
-  background-color: lightgreen;
   padding: 20px;
+  height: 90vh;
+}
+
+.left-box {
+  background-color: var(--shade-8);
+  height: 100%;
+  border-radius: 40px;
 }

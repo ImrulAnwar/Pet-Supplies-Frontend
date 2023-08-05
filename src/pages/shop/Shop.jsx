@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Line from '../../layouts/Line/Line'
 import './Shop.css'
 import SortAndFilter from './components/SortAndFilterSection/SortAndFilter'
-import ScrollableItemsList from './components/ScrollableItemsList/ScrollableItemsList'
+import ScrollableItemsList from './components/ScrollableItems/ScrollableItemsList'
 
 function Shop() {
   const [selectedSection, setSelectedSection] = useState('dogs');
@@ -12,7 +12,6 @@ function Shop() {
   };
 
   useEffect(() => {
-    // Add a small delay to the animations for each section
     document.querySelectorAll('.category').forEach((element, index) => {
       element.style.animationDelay = `${index * 0.3}s`;
     });
