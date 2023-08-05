@@ -1,0 +1,24 @@
+@import "../../../../colors.css";
+
+.welcome-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* Add any other styles you want for the container */
+}
+
+.left-welcome {
+  flex: 3;
+  background-color: red;
+  height: 1000px;
+  /* Styles for the left section */
+}
+
+.right-welcome {
+  flex: 2;
+  background-color: green;
+  height: 1000px;
+
+  /* Styles for the right section */
+}

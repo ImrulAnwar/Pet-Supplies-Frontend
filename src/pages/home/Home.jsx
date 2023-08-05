@@ -1,7 +1,10 @@
+import WelcomeSection from './components/WelcomeSection/WelcomeSection';
+
+
 function Home() {
   return (
     <div>
-      <h1>Hello</h1>
+      <WelcomeSection/>
     </div>
   )
 }

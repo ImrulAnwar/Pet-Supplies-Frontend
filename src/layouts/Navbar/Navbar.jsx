@@ -37,8 +37,8 @@ const Navbar = () => {
         <div className="right-section">
           <ul className='icons'>
             <li><Searchbar /></li>
-            <li><Link className='cart-icon link' to="/register"><img className="cart icon" src={cartIcon} alt="cart" /></Link></li>
-            <li><Link className='profile-icon link' to="/register"><img className="profile icon" src={profileIcon} alt="profile" /></Link></li>
+            <li><Link className='cart-icon link' to="/cart"><img className="cart icon" src={cartIcon} alt="cart" /></Link></li>
+            <li><Link className='profile-icon link' to="/profile"><img className="profile icon" src={profileIcon} alt="profile" /></Link></li>
           </ul>
         </div>
       </div>

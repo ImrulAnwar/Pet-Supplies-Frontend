@@ -1,0 +1,27 @@
+@import "../../colors.css";
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.line {
+  background-color: var(--shade-14);
+  border-radius: 10px;
+  height: 1px;
+  width: 0; /* Initial width set to 0 */
+  opacity: 0; /* Initially hidden */
+  animation: expandLine 0.3s 0.3s forwards; /* Animation for width and opacity */
+}
+
+/* Animation to make the line expand after a delay */
+@keyframes expandLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 90vw;
+    opacity: 1;
+  }
+}
