@@ -7,7 +7,44 @@
 }
 
 .left-box {
-  background-color: var(--shade-8);
+  background-color: var(--shade-5);
   height: 100%;
   border-radius: 40px;
+}
+
+.sort-by-box {
+  display: flex;
+  background: none;
+  justify-content: space-around;
+  padding-top: 2rem;
+}
+
+.sort-by-box h1,
+select {
+  background: none;
+}
+
+/* Style the <select> element */
+select#dropdown {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: var(--shade-8);
+  /* Hide the dropdown arrow */
+  -webkit-appearance: none; /* For Safari and newer versions of Chrome */
+  -moz-appearance: none; /* For Firefox */
+  appearance: none; /* For newer versions of Chrome, Edge, and other modern browsers */
+}
+
+/* Style the <option> elements */
+select#dropdown option {
+  /* Define your desired styles here */
+  padding: 8px;
+  background-color: transparent;
+}
+
+/* Style the selected <option> element */
+select#dropdown option:checked {
+  /* Define your desired styles here */
+  background-color: var(--shade-5);
 }

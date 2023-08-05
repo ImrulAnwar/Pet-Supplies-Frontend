@@ -1,6 +1,8 @@
-/* Style for the right section */
+@import "../../../../colors.css";
+
 .right-shop {
   flex: 4;
-  background-color: lightpink;
+  background-color: var(--shade-5);
   padding: 20px;
+  height: 90vh;
 }

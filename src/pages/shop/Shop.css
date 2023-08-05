@@ -1,5 +1,4 @@
-/* CSS styles for Shop component */
-
+@import "../../colors.css";
 /* Style for the top section */
 .top-shop {
   padding: 20px;
@@ -7,6 +6,9 @@
   align-items: center;
   justify-content: space-around;
   margin: 10px;
+  background-color: var(--shade-5);
+  margin: 10px 60px;
+  border-radius: 20px;
 }
 
 /* Style for the bottom section */
@@ -15,6 +17,7 @@
 }
 .category {
   animation: bounce-fade 0.9s;
+  background-color: transparent;
 }
 
 .selected-category {

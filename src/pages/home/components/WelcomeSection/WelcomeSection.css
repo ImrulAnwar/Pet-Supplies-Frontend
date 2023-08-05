@@ -45,7 +45,7 @@
   overflow: hidden; /* Hide overflowed text */
   border-right: 2px solid transparent; /* Add a blinking cursor effect */
   animation: typing 1.5s steps(40), blink-caret 0.75s step-end 3s;
-  animation-delay: 0.5s;
+  animation-delay: 0s;
   margin: 2rem 0rem;
 }
 
