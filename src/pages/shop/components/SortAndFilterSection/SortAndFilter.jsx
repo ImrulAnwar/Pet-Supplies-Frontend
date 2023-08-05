@@ -1,22 +1,21 @@
 import React from 'react'
 import './SortAndFilter.css'
-
+import Dropdown from '../../../../layouts/Dropdown/Dropdown'
+import Line from '../../../../layouts/Line/Line'
 const SortAndFilter = () => {
   const options = ['Option 1', 'Option 2', 'Option 3']
+  const handleDropdownSelect = (selectedValue) => {
+    // Your logic here to handle the selected value
+    console.log('Selected Value:', selectedValue);
+  };
 
   return (
     <div className='left-shop'>
       <div className="left-box">
-        <div className="sort-by-box">
-            <h1>Sort</h1>
-            <select id="dropdown">
-                {options.map((option, index) => (
-                  <option key={index} value={`option${index + 1}`}>
-                    {option}
-                  </option>
-                ))}
-            </select>   
-        </div>
+          <Dropdown text="Sort By" options={options} onSelect={handleDropdownSelect} /> 
+          <Line/>
+          <Dropdown text="Category" options={options} onSelect={handleDropdownSelect} /> 
+          <Line/>
       </div>
     </div>    
   );
