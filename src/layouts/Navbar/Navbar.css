@@ -63,7 +63,7 @@
 .right-section li,
 .left-section li {
   display: inline-block;
-  margin: 10px;
+  margin: 0px;
 }
 
 @keyframes fade-in-out {

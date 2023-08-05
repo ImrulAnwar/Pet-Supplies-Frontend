@@ -1,4 +1,4 @@
-@import "./src/colors.css";
+@import "../../colors.css";
 
 .search-bar {
   display: flex;

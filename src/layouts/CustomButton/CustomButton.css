@@ -1,0 +1,15 @@
+@import "../colors.css";
+
+.button {
+  display: inline-block; /* Make the button shrink-wrap its content */
+  background-color: var(--shade-16);
+  color: var(--shade-1);
+  padding: 20px 60px;
+  font-size: 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s; /* Add a transition for smooth color change */
+}
+
+.button:hover {
+  background-color: var(--shade-18); /* Change the color on hover to shade 24 */
+}
