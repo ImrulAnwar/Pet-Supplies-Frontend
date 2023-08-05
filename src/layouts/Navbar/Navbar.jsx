@@ -7,6 +7,7 @@ import shopIcon from '../../assets/icons/shop.png';
 import cartIcon from '../../assets/icons/cart.png';
 import profileIcon from '../../assets/icons/profile.png';
 import Searchbar from '../Searchbar/Searchbar.jsx'; 
+import Line from '../Line/Line'
 
 const Navbar = () => {
   const location = useLocation();

@@ -10,13 +10,13 @@
 .left-welcome {
   flex: 3;
   background-color: red;
-  height: 100vh;
+  height: 80vh;
   /* Styles for the left section */
 }
 
 .right-welcome {
   flex: 2;
   background-color: green;
-  height: 100vh;
+  height: 80vh;
   /* Styles for the right section */
 }
