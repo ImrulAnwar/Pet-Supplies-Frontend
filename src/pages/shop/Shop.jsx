@@ -10,8 +10,8 @@ function Shop() {
   const [selectedSection, setSelectedSection] = useState('All')
   const [items, setItems] = useState([])
   const [filteredItems, setFilteredItems] = useState([])
-  const sortOptions = ['Latest', 'Price', 'Name (A-Z)']
-  const categoryOptions = ['Option 1', 'Option 2', 'Option 3']
+  const sortOptions = ['Latest', 'Oldest', 'Price( High-Low )', 'Price( Low-High )','Name (A-Z)']
+  const categoryOptions = ['Accessories','Health & Care','Food', 'Litter', 'Beds & Carrier']
 
   const handleSectionSelect = (section) => {
     setSelectedSection(section)
@@ -29,6 +29,7 @@ function Shop() {
     fetchAllItems()
       .then((data) => {
         setItems(data)
+        setFilteredItems(data)
         console.log('Response data:', data)
       })
   }, [])

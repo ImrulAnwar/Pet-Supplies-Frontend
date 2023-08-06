@@ -7,16 +7,17 @@ const Dropdown = ({ text, options, onSelect }) => {
     const selectedValue = event.target.value;
     // Call the onSelect function with the selected value
     if (onSelect) {
+      console.log('in dropdown menu' + selectedValue)
       onSelect(selectedValue);
     }
   };
 
-  return (
+  return ( 
     <div className="dropdown-box">
       <h2>{text}</h2>
       <select id="dropdown" onChange={handleChange}>
         {options.map((option, index) => (
-          <option key={index} value={`option${index + 1}`}>
+          <option key={index} value={option}>
             {option}
           </option>
         ))}

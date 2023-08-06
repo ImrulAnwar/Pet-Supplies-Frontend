@@ -6,3 +6,9 @@
   padding: 20px;
   height: 90vh;
 }
+
+.right-shop h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
