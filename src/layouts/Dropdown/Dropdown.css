@@ -12,7 +12,7 @@ select {
 
 /* Style the <select> element */
 select#dropdown {
-  padding: 0.8em;
+  padding: 0.4em;
   font-size: 1rem;
   border-radius: 1em;
   background-color: var(--shade-8);
@@ -24,8 +24,9 @@ select#dropdown {
 
 /* Style the <option> elements */
 select#dropdown option {
+  padding: 1.2em;
+  text-align: center;
   /* Define your desired styles here */
-  padding: 8px;
   background-color: transparent;
 }
 

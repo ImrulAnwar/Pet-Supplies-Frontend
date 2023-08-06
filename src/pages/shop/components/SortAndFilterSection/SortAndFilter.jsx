@@ -3,19 +3,13 @@ import './SortAndFilter.css'
 import Dropdown from '../../../../layouts/Dropdown/Dropdown'
 import Line from '../../../../layouts/Line/Line'
 import FilterSection from '../FilterSection/FilterSection'
-const SortAndFilter = () => {
-  const options = ['Option 1', 'Option 2', 'Option 3']
-  const handleDropdownSelect = (selectedValue) => {
-    // Your logic here to handle the selected value
-    console.log('Selected Value:', selectedValue);
-  };
-
+const SortAndFilter = ({sortBy, category, sortOptions, categoryOptions}) => {
   return (
     <div className='left-shop'>
       <div className="left-box">
-          <Dropdown text="Sort By" options={options} onSelect={handleDropdownSelect} /> 
+          <Dropdown text="Sort By" options={sortOptions} onSelect={sortBy} /> 
           <Line/>
-          <Dropdown text="Category" options={options} onSelect={handleDropdownSelect} /> 
+          <Dropdown text="Category" options={categoryOptions} onSelect={category} /> 
           <Line/>
           <FilterSection/>
       </div>
