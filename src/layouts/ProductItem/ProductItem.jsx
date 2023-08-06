@@ -6,7 +6,10 @@ import './ProductItem.css'
 import CartButton from '../CartButton/CartButton'
 
 function ProductItem({ item, onClick }) {
-  const { title, price, product_image, is_favorite } = item;
+  const { title, price, product_image, is_favorite } = item
+  const BASE_URL = "http://localhost:8000"
+  const imageUrl = product_image ? `${BASE_URL}${product_image}` : random_product_img
+  // console.log(product_image)
   const handleClick = () => {
     // Check if onClick prop is provided and then call it
     if (onClick) {
@@ -16,7 +19,7 @@ function ProductItem({ item, onClick }) {
 
   return (
     <div className="product-item" onClick={handleClick}>
-        <img className= 'product-image' src={product_image?product_image:random_product_img} alt="product-image" />
+        <img className= 'product-image' src={imageUrl} alt="product-image" />
         <h2>{title}</h2>
         <img src={is_favorite ? heart_checked : heart_unchecked} alt="is_favorite" />
         <h3>৳{price}</h3>

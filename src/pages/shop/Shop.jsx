@@ -9,18 +9,28 @@ function Shop() {
   const [selectedSection, setSelectedSection] = useState('all')
   const [items, setItems] = useState([])
 
-  const handleSectionSelect = (section) => {
-    setSelectedSection(section);
 
-    if (section === 'all') {
+
+  const handleSectionSelect = (section) => {
+    setSelectedSection(section);    
+  };
+
+    useEffect(() => {
+    // Call the API whenever selectedSection changes
+    if (selectedSection === 'all') {
       axios.get('http://localhost:8000/items/all')
         .then((response) => {
-          setItems(response.data)
-          console.log('Response data:', response.data)
+          setItems(response.data);
+          console.log('Response data:', response.data);
         })
-        .catch((error) => console.error('Error fetching data:', error))
+        .catch((error) => console.error('Error fetching data:', error));
     }
-  };
+
+    // Perform any other actions based on selectedSection here
+    // ...
+
+  }, [selectedSection]);
+
 
   useEffect(() => {
     document.querySelectorAll('.category').forEach((element, index) => {
