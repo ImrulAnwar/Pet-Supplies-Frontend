@@ -1,0 +1,43 @@
+@import "../../colors.css";
+
+.product-item {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5em;
+  padding: 3em 1.5em;
+  border-radius: 1.5em;
+  transition: box-shadow 0.3s, transform 0.3s; /* Add a smooth transition effect */
+}
+
+.product-item:hover {
+  box-shadow: -0.3em 0.3em 1em var(--shade-17); /* Add the box shadow on hover */
+  transform: translateY(-0.2em); /* Add a slight elevation effect on hover */
+}
+
+.product-image {
+  height: 20em;
+  border-radius: 3em;
+}
+
+.product-item img,
+.product-item h2,
+.product-item h3,
+.button-wraper {
+  margin: 0.6em;
+}
+
+.product-item h2 {
+  word-wrap: break-word;
+  max-width: 12em;
+  text-align: center;
+  height: 4.5em; /* Set the desired height */
+  overflow: hidden; /* Hide any content that exceeds the height */
+  text-overflow: ellipsis; /* Display an ellipsis for the overflowed text */
+}
+
+.product-item h3 {
+  font-size: 2rem;
+  font-weight: 400;
+}
