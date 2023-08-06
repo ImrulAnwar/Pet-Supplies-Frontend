@@ -3,11 +3,12 @@
 .left-shop {
   flex: 1;
   padding: 1.5em;
-  height: 90vh;
+  height: auto;
 }
 
 .left-box {
   background-color: var(--shade-5);
-  height: 100%;
+  height: auto;
+  padding: 1.5em;
   border-radius: 1.5em;
 }

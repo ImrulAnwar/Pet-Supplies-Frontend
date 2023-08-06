@@ -2,6 +2,7 @@ import React from 'react'
 import './SortAndFilter.css'
 import Dropdown from '../../../../layouts/Dropdown/Dropdown'
 import Line from '../../../../layouts/Line/Line'
+import FilterSection from '../FilterSection/FilterSection'
 const SortAndFilter = () => {
   const options = ['Option 1', 'Option 2', 'Option 3']
   const handleDropdownSelect = (selectedValue) => {
@@ -16,6 +17,7 @@ const SortAndFilter = () => {
           <Line/>
           <Dropdown text="Category" options={options} onSelect={handleDropdownSelect} /> 
           <Line/>
+          <FilterSection/>
       </div>
     </div>    
   );

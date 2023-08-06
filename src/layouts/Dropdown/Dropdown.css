@@ -12,9 +12,9 @@ select {
 
 /* Style the <select> element */
 select#dropdown {
-  padding: 10px;
-  font-size: 16px;
-  border-radius: 4px;
+  padding: 0.8em;
+  font-size: 1rem;
+  border-radius: 1em;
   background-color: var(--shade-8);
   /* Hide the dropdown arrow */
   -webkit-appearance: none; /* For Safari and newer versions of Chrome */

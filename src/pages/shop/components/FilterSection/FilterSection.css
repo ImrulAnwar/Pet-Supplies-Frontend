@@ -1,0 +1,127 @@
+@import "../../../../colors.css";
+
+.filter-section,
+.filter-heading,
+.filter-heading img,
+.filter-heading h2,
+.price-range,
+.high-low,
+.price-range h2,
+.high-low input,
+.availability,
+.availability h2,
+.check-boxes,
+.check-boxes label {
+  background: none;
+}
+
+.filter-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: -0.8em;
+}
+
+.high-low {
+  display: flex;
+  justify-content: space-around;
+}
+
+.price-range,
+.availability {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.availability {
+  margin: 1.5em;
+}
+
+.filter-heading img {
+  scale: 0.4;
+}
+
+.filter-box {
+  /* remove height later */
+  height: auto;
+  padding: 1.5em;
+  border-radius: 1.2em;
+  margin: 0em 1.2em;
+  width: auto;
+  background: var(--shade-8);
+}
+
+.high-low input {
+  border: 1px solid var(--shade-14);
+  padding: 1em;
+  border-radius: 1.2em;
+  margin: 1em;
+  color: var(--shade-11);
+}
+
+.high-low input::placeholder {
+  color: var(--shade-16); /* Replace --your-color with your desired color */
+}
+
+.check-boxes {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.check-boxes label {
+  display: flex;
+  justify-content: flex-start;
+  font-size: 140%;
+  margin: 0.2em;
+  width: auto;
+  align-items: center;
+}
+
+.check-boxes label input {
+  margin: 0.6em;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  border: 2px solid var(--shade-2);
+  border-radius: 50%;
+  background-color: var(--shade-2);
+  outline: none;
+  height: 1.8em;
+  width: 1.8em;
+  position: relative;
+  margin-right: 1.6em;
+}
+
+.check-boxes label input:checked {
+  background-color: var(--shade-16);
+  border-color: var(--shade-16);
+}
+
+/* Styles when the checkbox is hovered */
+.check-boxes label input:hover {
+  border-color: var(--shade-16);
+}
+
+/* Add a custom tick sign using a pseudo-element */
+.check-boxes label input::after {
+  content: "";
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  width: 4px;
+  height: 8px;
+  border: solid var(--shade-2);
+  border-width: 0 2px 2px 0;
+  display: none;
+}
+
+/* Show the custom tick sign when the checkbox is checked */
+.check-boxes label input:checked::after {
+  display: block;
+}
