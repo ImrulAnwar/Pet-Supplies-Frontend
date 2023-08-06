@@ -1,7 +1,8 @@
 import React from 'react'
 import './FilterSection.css'
 import filterIcon from '../../../../assets/icons/filter.png'
-import Line from '../../../../layouts/Line/Line';
+import Line from '../../../../layouts/Line/Line'
+import CustomButton from '../../../../layouts/CustomButton/CustomButton'
 
 function FilterSection() {
   return (
@@ -38,6 +39,10 @@ function FilterSection() {
               </div>
             </div>
             <Line/>
+            <div className="button-container">
+              <CustomButton text = 'Apply'/>
+            </div>
+            
         </div>  
     </div>  
   );

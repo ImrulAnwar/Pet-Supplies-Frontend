@@ -11,7 +11,8 @@
 .availability,
 .availability h2,
 .check-boxes,
-.check-boxes label {
+.check-boxes label,
+.button-container {
   background: none;
 }
 
@@ -21,11 +22,13 @@
   justify-content: center;
   position: relative;
   left: -0.8em;
+  margin: 1.4em;
 }
 
 .high-low {
   display: flex;
   justify-content: space-around;
+  margin: 1.3em 0em;
 }
 
 .price-range,
@@ -37,7 +40,7 @@
 }
 
 .availability {
-  margin: 1.5em;
+  margin: 1.3em;
 }
 
 .filter-heading img {
@@ -124,4 +127,12 @@
 /* Show the custom tick sign when the checkbox is checked */
 .check-boxes label input:checked::after {
   display: block;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 1.8em;
+  margin-bottom: 0.7em;
 }
