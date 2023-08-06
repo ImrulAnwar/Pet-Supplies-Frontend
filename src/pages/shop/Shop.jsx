@@ -67,7 +67,7 @@ function Shop() {
       <Line />
       <div className="bottom-shop">
         <SortAndFilter/>
-        <ScrollableItemsList/>
+        <ScrollableItemsList items = {items}/>
       </div>
     </>
   );

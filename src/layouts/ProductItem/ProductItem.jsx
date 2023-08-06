@@ -5,7 +5,8 @@ import heart_unchecked from '../../assets/icons/heart_unchecked.png'
 import './ProductItem.css'
 import CartButton from '../CartButton/CartButton'
 
-function ProductItem({ image = random_product_img, title = "Product Title", is_favorite = false, price = 0, onClick }) {
+function ProductItem({ item, onClick }) {
+  const { title, price, product_image, is_favorite } = item;
   const handleClick = () => {
     // Check if onClick prop is provided and then call it
     if (onClick) {
@@ -15,7 +16,7 @@ function ProductItem({ image = random_product_img, title = "Product Title", is_f
 
   return (
     <div className="product-item" onClick={handleClick}>
-        <img className= 'product-image' src={image} alt="product-image" />
+        <img className= 'product-image' src={product_image?product_image:random_product_img} alt="product-image" />
         <h2>{title}</h2>
         <img src={is_favorite ? heart_checked : heart_unchecked} alt="is_favorite" />
         <h3>৳{price}</h3>
