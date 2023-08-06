@@ -5,7 +5,13 @@ import ProductItem from '../../../../layouts/ProductItem/ProductItem'
 function ScrollableItemsList() {
   return (
     <div className='right-shop'>
-      <h1>This is Scrollable Items List</h1>
+      <ProductItem/>
+      <ProductItem/>
+      <ProductItem/>
+      <ProductItem/>
+      <ProductItem/>
+      <ProductItem/>
+      <ProductItem/>
       <ProductItem/>
     </div>    
   )

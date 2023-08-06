@@ -8,12 +8,12 @@
   margin: 1.5em;
   padding: 3em 1.5em;
   border-radius: 1.5em;
-  transition: box-shadow 0.3s, transform 0.3s; /* Add a smooth transition effect */
+  transition: box-shadow 0.3s, transform 0.5s; /* Add a smooth transition effect */
 }
 
 .product-item:hover {
   box-shadow: -0.3em 0.3em 1em var(--shade-17); /* Add the box shadow on hover */
-  transform: translateY(-0.2em); /* Add a slight elevation effect on hover */
+  transform: translateY(-1em); /* Add a slight elevation effect on hover */
 }
 
 .product-image {
