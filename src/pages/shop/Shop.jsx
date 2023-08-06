@@ -3,33 +3,37 @@ import Line from '../../layouts/Line/Line'
 import './Shop.css'
 import SortAndFilter from './components/SortAndFilterSection/SortAndFilter'
 import ScrollableItemsList from './components/ScrollableItems/ScrollableItemsList'
-import axios from 'axios'
+import { fetchAllItems } from '../../services/item_api'
 
 function Shop() {
-  const [selectedSection, setSelectedSection] = useState('all')
+  const [selectedSection, setSelectedSection] = useState('All')
   const [items, setItems] = useState([])
-
-
+  const [filteredItems, setFilteredItems] = useState([])
 
   const handleSectionSelect = (section) => {
     setSelectedSection(section);    
   };
 
-    useEffect(() => {
-    // Call the API whenever selectedSection changes
-    if (selectedSection === 'all') {
-      axios.get('http://localhost:8000/items/all')
-        .then((response) => {
-          setItems(response.data);
-          console.log('Response data:', response.data);
-        })
-        .catch((error) => console.error('Error fetching data:', error));
+  useEffect(() => {
+    fetchAllItems()
+      .then((data) => {
+        setItems(data);
+        console.log('Response data:', data);
+      });
+  }, []);
+
+  useEffect(() => {
+    // Filter items based on the selected category whenever it changes
+    if (selectedSection === 'All') {
+      setFilteredItems(items); // Show all items when 'all' category is selected
+    } else if (selectedSection === 'Favorite') {
+      const filtered = items.filter((item) => item.is_favorite === selectedSection);
+      setFilteredItems(filtered);
+    } else {
+      const filtered = items.filter((item) => item.pet_type === selectedSection);
+      setFilteredItems(filtered);
     }
-
-    // Perform any other actions based on selectedSection here
-    // ...
-
-  }, [selectedSection]);
+  }, [selectedSection, items]);
 
 
   useEffect(() => {
@@ -44,32 +48,32 @@ function Shop() {
       <Line />
       <div className="top-shop">
         <h2
-          className={`category ${selectedSection === 'all' ? 'selected-category' : ''}`}
-          onClick={() => handleSectionSelect('all')}
+          className={`category ${selectedSection === 'All' ? 'selected-category' : ''}`}
+          onClick={() => handleSectionSelect('All')}
         >
           All
         </h2>
         <h2
-          className={`category ${selectedSection === 'dogs' ? 'selected-category' : ''}`}
-          onClick={() => handleSectionSelect('dogs')}
+          className={`category ${selectedSection === 'Dog' ? 'selected-category' : ''}`}
+          onClick={() => handleSectionSelect('Dog')}
         >
           Dogs
         </h2>
         <h2
-          className={`category ${selectedSection === 'cats' ? 'selected-category' : ''}`}
-          onClick={() => handleSectionSelect('cats')}
+          className={`category ${selectedSection === 'Cat' ? 'selected-category' : ''}`}
+          onClick={() => handleSectionSelect('Cat')}
         >
           Cats
         </h2>
         <h2
-          className={`category ${selectedSection === 'birds' ? 'selected-category' : ''}`}
-          onClick={() => handleSectionSelect('birds')}
+          className={`category ${selectedSection === 'Bird' ? 'selected-category' : ''}`}
+          onClick={() => handleSectionSelect('Bird')}
         >
           Birds
         </h2>
         <h2
-          className={`category ${selectedSection === 'favorite' ? 'selected-category' : ''}`}
-          onClick={() => handleSectionSelect('favorite')}
+          className={`category ${selectedSection === 'Favorite' ? 'selected-category' : ''}`}
+          onClick={() => handleSectionSelect('Favorite')}
         >
           Favourite
         </h2>
@@ -77,7 +81,7 @@ function Shop() {
       <Line />
       <div className="bottom-shop">
         <SortAndFilter/>
-        <ScrollableItemsList items = {items}/>
+        <ScrollableItemsList items = {filteredItems}/>
       </div>
     </>
   );

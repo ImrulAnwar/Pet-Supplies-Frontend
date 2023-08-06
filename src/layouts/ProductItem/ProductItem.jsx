@@ -4,10 +4,10 @@ import heart_checked from '../../assets/icons/heart_checked.png'
 import heart_unchecked from '../../assets/icons/heart_unchecked.png'
 import './ProductItem.css'
 import CartButton from '../CartButton/CartButton'
+import { BASE_URL } from '../../Utils/constants'
 
 function ProductItem({ item, onClick }) {
   const { title, price, product_image, is_favorite } = item
-  const BASE_URL = "http://localhost:8000"
   const imageUrl = product_image ? `${BASE_URL}${product_image}` : random_product_img
   // console.log(product_image)
   const handleClick = () => {
