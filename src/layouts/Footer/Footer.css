@@ -1,0 +1,39 @@
+@import "../../colors.css";
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--shade-3);
+  padding: 3em;
+}
+
+.right-footer {
+  display: flex;
+  flex-direction: column;
+  background: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-footer {
+  background: none;
+}
+
+.left-footer h2 {
+  position: relative;
+  left: 0.4em;
+}
+
+.left-footer p {
+  font-size: 1.6em;
+}
+
+.footer h2,
+img,
+.socials {
+  background: none;
+}
+
+.right-footer img {
+  scale: 0.7;
+}
