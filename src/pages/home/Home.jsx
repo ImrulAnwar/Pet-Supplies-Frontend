@@ -12,8 +12,9 @@ function Home() {
       <WelcomeSection/>
       <Line/>
       <CategorySection/>
-        <Line/>
+      <Line/>
       <WhatWeOffer/>
+      <Line/>
       <OurProduct/>
     </div>
   )
