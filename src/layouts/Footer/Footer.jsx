@@ -1,12 +1,35 @@
 import './Footer.css'
+import React, { useEffect, useRef } from 'react'
 import instagram from '../../assets/icons/instagram.png'
 import facebook from '../../assets/icons/facebook.png'
 import twitter from '../../assets/icons/twitter.png'
 import pinterest from '../../assets/icons/pinterest.png'
 
 function Footer() {
+  const footerRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('slide-up-animation');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.2 });
+
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
+
+    return () => {
+      if (footerRef.current) {
+        observer.unobserve(footerRef.current);
+      }
+    };
+  }, []);
     return (
-        <div className='footer'>
+    <div className='footer' ref={footerRef}>
             <div className="left-footer">
                 <h2>
                     About US
