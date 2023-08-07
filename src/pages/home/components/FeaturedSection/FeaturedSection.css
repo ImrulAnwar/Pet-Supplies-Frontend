@@ -1,0 +1,18 @@
+@import "../../../../colors.css";
+
+.featured-box {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4em;
+}
+
+.view-all {
+  font-size: 1.5rem;
+}
+
+.view-all:hover {
+  text-decoration-line: underline;
+}

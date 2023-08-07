@@ -24,6 +24,7 @@
   border-radius: 2em;
   font-size: 1.8rem;
   display: flex;
+  opacity: 0;
 }
 
 .left-product {
@@ -98,6 +99,7 @@ p {
 
 .from-left-animation {
   animation: fromLeft 0.8s ease-out;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fromRight {
@@ -113,4 +115,5 @@ p {
 
 .from-right-animation {
   animation: fromRight 0.8s ease-out;
+  animation-fill-mode: forwards;
 }
