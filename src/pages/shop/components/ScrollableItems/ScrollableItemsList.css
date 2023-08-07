@@ -4,7 +4,7 @@
   flex: 4;
   /* background-color: var(--shade-5); */
   padding: 20px;
-  height: 90vh;
+  height: auto;
 }
 
 .right-shop h1 {

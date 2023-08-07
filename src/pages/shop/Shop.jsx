@@ -56,15 +56,17 @@ function Shop() {
 
 
   return (
-    <>
+    <div className="shop-container">
       <Line />
       <TopShop selectedSection={selectedSection} handleSectionSelect={handleSectionSelect} />
       <Line />
       <div className="bottom-shop">
-        <SortAndFilter sortBy={sortBy} category={category} sortOptions={sortOptions} categoryOptions={categoryOptions}/>
-        <ScrollableItemsList items = {filteredItems}/>
+        <SortAndFilter sortBy={sortBy} category={category} sortOptions={sortOptions} categoryOptions={categoryOptions} />
+        <div className="scrollable-items">
+          <ScrollableItemsList items={filteredItems} />
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 

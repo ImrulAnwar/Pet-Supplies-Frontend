@@ -9,7 +9,22 @@
   width: 22em;
   padding: 1.6em 1.8em;
   border-radius: 2.8em;
-  transition: box-shadow 0.3s, transform 0.5s; /* Add a smooth transition effect */
+  transition: box-shadow 0.3s, transform 0.5s, opacity 0.5s; /* Add a smooth transition effect */
+
+  /* Set initial opacity to 0 */
+  opacity: 0;
+  /* Start opacity animation from 0 to 1 */
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+/* Keyframes for the opacity animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .product-item:hover {
