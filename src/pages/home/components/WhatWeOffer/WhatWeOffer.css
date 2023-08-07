@@ -1,0 +1,75 @@
+@import "../../../../colors.css";
+
+.offer-box {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.offer {
+  /* width: 20em; */
+  flex: 1;
+  margin: 5em;
+  padding: 4em;
+  border-radius: 5em;
+  min-height: 40em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+}
+
+.offer.fade-in-animation {
+  animation: fade-in 0.6s ease-in-out forwards;
+}
+
+.left-offer,
+.right-offer {
+  background-color: var(--shade-7);
+}
+
+.middle-offer {
+  background-color: var(--shade-3);
+}
+
+.offer img {
+  background-color: transparent;
+  height: 5em;
+  margin: 0.4em;
+}
+
+.offer h2,
+p {
+  background: none;
+  text-align: center;
+  margin: 0.4em;
+}
+
+.offer p,
+h2 {
+  font-size: 1.8rem;
+}
+
+.image {
+  background: none;
+  display: flex;
+  justify-content: center;
+}
+
+.scroll-triggered-animation {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

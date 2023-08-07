@@ -5,6 +5,7 @@ import Shop from './pages/shop/Shop'
 import Cart from './pages/cart/Cart'
 import Profile from './pages/profile/Profile'
 import Navbar from './layouts/Navbar/Navbar'
+import Footer from './layouts/Footer/Footer'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }
