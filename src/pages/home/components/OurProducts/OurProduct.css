@@ -19,7 +19,7 @@
 .left-product,
 .right-product {
   background-color: var(--shade-3);
-  margin: 5em;
+  margin: 3em;
   padding: 2em;
   border-radius: 2em;
   font-size: 1.8rem;
@@ -58,4 +58,54 @@ p {
 
 .prod img {
   height: 40rem;
+}
+
+/* middle-image animation */
+@keyframes bounce-scale-opacity {
+  0% {
+    transform: translateY(0) scale(0.8); /* Starting position and scaling */
+    opacity: 0; /* Starting opacity */
+  }
+  50% {
+    transform: translateY(-20px) scale(1.2); /* Bounce up and scale up */
+    opacity: 0.5; /* Full opacity */
+  }
+  100% {
+    transform: translateY(0) scale(1); /* Ending position and scaling */
+    opacity: 1; /* Ending opacity */
+  }
+}
+
+.bounce-scale-opacity-animation {
+  animation: bounce-scale-opacity 0.8s;
+}
+
+@keyframes fromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.from-left-animation {
+  animation: fromLeft 0.8s ease-out;
+}
+
+@keyframes fromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.from-right-animation {
+  animation: fromRight 0.8s ease-out;
 }
