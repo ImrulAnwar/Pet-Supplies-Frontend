@@ -1,0 +1,44 @@
+@import "../../../../colors.css";
+
+/* Define the initial state of the category-item */
+.category-item {
+  margin: 3em;
+  opacity: 0;
+  animation: fade-in 0.5s ease-in-out forwards;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pet-box {
+  background: none;
+  width: 25em;
+  height: 25em;
+  border-radius: 50%;
+  border: solid 2px var(--shade-14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+
+.pet-box img {
+  height: 100%;
+  background: none;
+}
+
+.pet-btn-box {
+  width: 25em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3em;
+}

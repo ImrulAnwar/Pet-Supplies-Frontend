@@ -50,7 +50,7 @@ function Shop() {
 
   useEffect(() => {
     document.querySelectorAll('.category').forEach((element, index) => {
-      element.style.animationDelay = `${index * 0.3}s`
+      element.style.animationDelay = `${index * 0.2}s`
     })
   }, [])
 
