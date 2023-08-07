@@ -4,6 +4,7 @@
   flex: 1;
   padding: 1.5em;
   height: auto;
+  animation: fadeIn 0.8s ease-in-out forwards;
 }
 
 .left-box {
@@ -12,4 +13,14 @@
   padding: 1.5em;
   border-radius: 1.5em;
   padding-bottom: 3em;
+}
+
+/* Keyframes for the opacity animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -4,10 +4,11 @@
   flex: 4;
   /* background-color: var(--shade-5); */
   padding: 20px;
-  height: auto;
+  min-height: 100%;
 }
 
 .right-shop h1 {
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;

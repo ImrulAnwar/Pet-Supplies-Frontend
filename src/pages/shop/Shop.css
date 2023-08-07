@@ -17,6 +17,7 @@
 
 .scrollable-items {
   flex-grow: 1;
+  flex: 4;
 }
 /* Style for the bottom section */
 .bottom-shop {
