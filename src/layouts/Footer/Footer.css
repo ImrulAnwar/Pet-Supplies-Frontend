@@ -9,7 +9,7 @@
 }
 
 .slide-up-animation {
-  animation: slide-up 0.4s ease-out 0.5s forwards;
+  animation: slide-up 0.4s ease-out 0.3s forwards;
 }
 
 .right-footer {

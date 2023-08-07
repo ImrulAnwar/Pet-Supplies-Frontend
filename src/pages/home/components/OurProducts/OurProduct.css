@@ -60,6 +60,10 @@ p {
   height: 40rem;
 }
 
+.middle-image {
+  opacity: 0;
+}
+
 /* middle-image animation */
 @keyframes bounce-scale-opacity {
   0% {
@@ -78,6 +82,7 @@ p {
 
 .bounce-scale-opacity-animation {
   animation: bounce-scale-opacity 0.8s;
+  animation-fill-mode: forwards;
 }
 
 @keyframes fromLeft {
