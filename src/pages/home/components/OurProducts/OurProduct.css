@@ -1,0 +1,61 @@
+@import "../../../../colors.css";
+
+.product-box {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.prod {
+  flex: 1;
+  min-height: 25em;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.left-product,
+.right-product {
+  background-color: var(--shade-3);
+  margin: 5em;
+  padding: 2em;
+  border-radius: 2em;
+  font-size: 1.8rem;
+  display: flex;
+}
+
+.left-product {
+  align-items: flex-end;
+}
+
+.right-product {
+  align-items: flex-start;
+}
+
+.left-product h2,
+.left-product p {
+  background-color: transparent;
+  text-align: right;
+}
+
+.left-product h2 {
+  position: relative;
+  left: -0.4em;
+}
+
+.right-product h2 {
+  position: relative;
+  left: 0.4em;
+}
+
+.right-product h2,
+p {
+  background-color: transparent;
+  text-align: left;
+}
+
+.prod img {
+  height: 40rem;
+}
